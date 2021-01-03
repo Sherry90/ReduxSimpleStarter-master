@@ -1,15 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import React from "react"; // react 모듈을 불러와 React 변수에 할당
 
-import App from './components/app';
-import reducers from './reducers';
+// Create a new component. This component should produce
+// some HTML
+// AIzaSyAR4yfD2CjCsoZtYvVyFZ04dOy45STHYgI
+const App = function () {
+    return <div>Hi!</div>
+}
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
-
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+// Take this component's generated HTML and put it
+// on the page (in the DOM)
