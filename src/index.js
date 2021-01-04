@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 // Create a new component. This component should produce
 // some HTML
 // AIzaSyAR4yfD2CjCsoZtYvVyFZ04dOy45STHYgI
-const App = function () {
+const App = () => { // using ES6 syntax
     return <div>Hi!</div>
 }
 
