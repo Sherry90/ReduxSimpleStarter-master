@@ -1,4 +1,5 @@
 import React from "react"; // react 모듈을 불러와 React 변수에 할당
+import ReactDOM from 'react-dom';
 
 // Create a new component. This component should produce
 // some HTML
@@ -9,3 +10,4 @@ const App = function () {
 
 // Take this component's generated HTML and put it
 // on the page (in the DOM)
+ReactDOM.render(<App />);
