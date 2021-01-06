@@ -1,6 +1,8 @@
 import React from "react"; // react 모듈을 불러와 React 변수에 할당
 import ReactDOM from 'react-dom';
 
+const API_KEY = 'AIzaSyAR4yfD2CjCsoZtYvVyFZ04dOy45STHYgI';
+
 // Create a new component. This component should produce
 // some HTML
 // AIzaSyAR4yfD2CjCsoZtYvVyFZ04dOy45STHYgI
