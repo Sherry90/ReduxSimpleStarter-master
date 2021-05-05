@@ -9,8 +9,18 @@ class SearchBar extends Component {
         // 유저가 search input에 값을 입력할 때마다 property term이 업데이트됨.
         // term은 아무 이름이나 가능.
     }
+
     render() {
-        return <input onChange={(event) => console.log(event.target.value)} />; // onChange : react property 변경 event를 감지.
+        //return <input onChange={(event) => console.log(event.target.value)} />; // onChange : react property 변경 event를 감지.
+        return (
+            <div>
+                <input
+                    value = {this.state.term}
+                    onChange={(event) => this.setState({term: event.target.value})}/>
+                {/*// 건네고자 하는 새로운 state를 담은 객체*/}
+                {/*// constructor 안의 this.state는 this.setState으로 변경된다.*/}
+            </div>
+        );
     }
 
     /*
