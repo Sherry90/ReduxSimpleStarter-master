@@ -13,10 +13,10 @@ class SearchBar extends Component {
     render() {
         //return <input onChange={(event) => console.log(event.target.value)} />; // onChange : react property 변경 event를 감지.
         return (
-            <div>
+            <div className="search-bar">
                 <input
                     value = {this.state.term}
-                    onChange={(event) => this.setState({term: event.target.value})}/>
+                    onChange={(event) => this.onInputChange(event.target.value)}/>
                 {/*// 건네고자 하는 새로운 state를 담은 객체*/}
                 {/*// constructor 안의 this.state는 this.setState으로 변경된다.*/}
             </div>
@@ -28,8 +28,14 @@ class SearchBar extends Component {
         console.log(event.target.value);
         //console.log(event);
     } // <input /> input event handler
-
      */
+
+    onInputChange(term) {
+        this.setState({term});
+        this.props.onSearchTermChange(term);
+    }
+
+
 
 }
 
