@@ -23,7 +23,6 @@ class App extends Component  {
                 videoData : videoData,
                 selectVideo : videoData[0]
             });
-            //this.setState({ videoData : videoData});
         });
     }
     render() {
@@ -32,7 +31,9 @@ class App extends Component  {
             <div>
                 <SearchBar />
                 <VideoDetail video = {this.state.selectVideo} />
-                <VideoList videos = {this.state.videoData} />
+                <VideoList
+                    onVideoSelect = {selectVideo => this.setState({selectVideo})}
+                    videos = {this.state.videoData} />
             </div>
         );
     }
