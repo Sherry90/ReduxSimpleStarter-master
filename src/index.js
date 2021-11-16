@@ -17,19 +17,24 @@ class App extends Component  {
             selectVideo : null
         };
 
+        this.videoSearch('cat');
+    }
+
+    videoSearch(term) {
         // YTSearch p1. 구성옵션을 object로 넘김, p2 callback 함수
-        YTSearch({key : API_KEY, term : 'cat'}, (videoData) => {
+        YTSearch({key : API_KEY, term : term}, (videoData) => {
             this.setState({
                 videoData : videoData,
                 selectVideo : videoData[0]
             });
         });
     }
+
     render() {
         //console.log(this.state.videoData);
         return (
             <div>
-                <SearchBar />
+                <SearchBar onSearchTermChange ={term => this.videoSearch(term)} />
                 <VideoDetail video = {this.state.selectVideo} />
                 <VideoList
                     onVideoSelect = {selectVideo => this.setState({selectVideo})}

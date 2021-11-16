@@ -12,14 +12,20 @@ class SearchBar extends Component {
     }
     render() {
         return (
-            <div>
-                {this.state.term}
-                <input onChange={event => this.setState({ term : event.target.value }) } />
+            <div className="search-bar">
+                <input
+                    value={this.state.term}
+                    onChange={event => this.onInputChange(event.target.value) } />
             </div>
         );
     }
     // onChange는 input의 변화를 감지하는, react property.
     // onChange ={}  {}내부에 이벤트 핸들러를 이용하여 이벤트 전달.
+
+    onInputChange(term){
+        this.setState({term});
+        this.props.onSearchTermChange(term);
+    }
 }
 
 
