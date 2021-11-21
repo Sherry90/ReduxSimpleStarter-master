@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import YTSearch from 'youtube-api-search'
@@ -31,10 +32,12 @@ class App extends Component  {
     }
 
     render() {
+        // debounce 함수는 입력한 ms 마다 호출된다
+        const videoSearch = _.debounce((term) => {this.videoSearch(term)}, 300);
         //console.log(this.state.videoData);
         return (
             <div>
-                <SearchBar onSearchTermChange ={term => this.videoSearch(term)} />
+                <SearchBar onSearchTermChange ={videoSearch} />
                 <VideoDetail video = {this.state.selectVideo} />
                 <VideoList
                     onVideoSelect = {selectVideo => this.setState({selectVideo})}
