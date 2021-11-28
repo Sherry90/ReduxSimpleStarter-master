@@ -1,4 +1,4 @@
-export default function() {
+export default () => {
     return [
         { title: 'JS : ES6'},
         { title: 'Harry'},
