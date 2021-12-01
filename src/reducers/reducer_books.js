@@ -1,7 +1,7 @@
 export default () => {
     return [
         { title: 'JS : ES6'},
-        { title: 'Harry'},
+        { title: 'Harry Cotter'},
         { title: 'Twin Tower'},
         { title: 'Ruby'},
     ]
