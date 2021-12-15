@@ -1,14 +1,9 @@
-import React, {Component} from 'react';
-import BookList from "../conatiners/book-list";
-import BookDetail from "../conatiners/book-detail";
+import React, { Component } from 'react';
 
 export default class App extends Component {
-    render() {
-        return (
-            <div>
-                <BookList />
-                <BookDetail />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>React simple starter</div>
+    );
+  }
 }
